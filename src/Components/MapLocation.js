@@ -1,8 +1,8 @@
 import React from 'react'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import Location from './Location'
 
-import Food from '../resources/food.svg'
-import Truck from '../resources/truck.svg'
+import ChangeView from './ChangeView'
 
 import { useState } from 'react'
 import { useAxiosGet } from '../Hooks/UseAxiosGet'
@@ -15,6 +15,8 @@ function MapLocation() {
     }
 
     var [orderType, setOrderType] = useState('takeaway')
+    var [coordinates, setCoordinates] = useState([13.672416, -89.284044])
+    var [popup, setPopup] = useState('Santa Tecla')
 
     let petition = useAxiosGet(`https://api.elaniin.dev/api/locations?type=${orderType}`)
     let content = null
@@ -22,21 +24,28 @@ function MapLocation() {
 
     if(petition.response !== null)
         content = petition.response.data.map(e => 
-            <Location name={e.name} 
+            <Location 
+            name={e.name} 
             key={key++}
             schedule={
                 `Abierto de ${e.opening_time.substring(0, e.opening_time.length - 3)} ` + 
                 ` a ${e.closing_time.substring(0, e.closing_time.length - 3)}`
-            } address={e.address} />
+            } 
+            address={e.address}
+            changeParentState={setCoordinates}
+            changeParentPopup={setPopup}
+            childCoordinates={[parseFloat(e.latitude), parseFloat(e.longitude)]}
+            />
         )
 
     return(
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-12 col-md-6 d-flex flex-column">
+        <div className="container-fluid mt-4 pt-4">
+            <div className="row mapContainer d-flex align-items-center">
+                <div className="col-12 col-md-4 d-flex flex-column">
                     <div className="row">
-                        <h1 className="col-12 druk">Estamos para ti</h1>
+                        <h1 className="col-12 druk ms-3">Estamos para ti</h1>
                     </div>
+                    
                     <div className="row">
                         <button 
                         id="takeaway"
@@ -57,10 +66,33 @@ function MapLocation() {
                             Domicilio
                         </button>
                     </div>
+                    <div className="row align-items-center justify-content-end searchbar">
+                        <svg className="icon search col-2"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20.9999 21L16.6499 16.65" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input className="col-9 d-flex align-items-center"
+                        type="text" name="" id="inputRest" placeholder="Buscar nombre o direccion"/>
+                    </div>
+                    <div className="row location-container">
+                        {content}
+                    </div>
                 </div>
-                <div className="col-12 col-md-6 p-3">
-                    {content}
-                </div>
+                <MapContainer 
+                className="d-none d-md-block col-8 col-md-8 map" 
+                center={coordinates} zoom={15} scrollWheelZoom={true}>
+                    <ChangeView center={coordinates} zoom={15}/>
+                    <TileLayer
+                        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <Marker position={coordinates}>
+                        <Popup>
+                            {popup}
+                        </Popup>
+                    </Marker>
+                </MapContainer>
             </div>
         </div>
     )

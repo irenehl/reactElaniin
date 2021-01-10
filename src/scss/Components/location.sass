@@ -1,4 +1,8 @@
+.location-container
+    justify-content: center
+
 .location
+    width: 80%
     margin: 0.7rem
     padding: 1rem
     border-radius: 5px
@@ -40,4 +44,32 @@
 
     .icon>*
         fill: white
+
+.searchbar
+    border-top: 1px solid gray
+    border-bottom: 1px solid gray
+    padding: 0.5rem
+
+#inputRest
+    border: none
+
+.map
+    height: 60vh
+
+@include media(xs)
+    .take-out
+        font-size: 1rem
+
+@include media(md)
+    .mapContainer
+        margin: 3rem 0
     
+    .location
+        margin-right: 1.5rem
+
+    .location-container
+        justify-content: flex-end
+
+    .take-out
+        padding: 1rem 0
+        font-size: 1.4rem
