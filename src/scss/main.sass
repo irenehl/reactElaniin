@@ -3,12 +3,25 @@ $secondary: rgba(0, 0, 0, 0.4)
 
 @import './Mixin/mixin'
 
+@import './Components/form'
+@import './Components/footer'
+@import './Components/carousel'
 @import './Components/about_us'
 @import './Components/location'
 @import './Components/big_hero'
 @import './Components/navigation'
 @import './Components/yellow_body'
+@import './Components/app_download'
 @import './Components/phone_navigation'
 
 .primary
     color: $primary
+
+input:focus,textarea:focus
+    outline: none
+
+textarea
+    resize: none
+
+a,a:active,a:focus
+    text-decoration: none

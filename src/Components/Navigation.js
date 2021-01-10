@@ -5,9 +5,11 @@ function Navigation(props) {
         <>
         <nav className="ms-5 mt-3 mb-3 navbar navbar-expand-lg navbar-light">
             <div className="container-fluid">
-                <a className="navbar-brand fw-bold druk" href="#">Foodies</a>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
+                        <li className="nav-item ms-5 me-1">
+                            <a className="navbar-brand fw-bold druk" href="#">Foodies</a>
+                        </li>
                         <li className="nav-item ms-5 me-1">
                             <a className="fw-bold active nav-link syne" aria-current="page" href="#">Acerca de</a>
                         </li>

@@ -14,6 +14,7 @@ import MenuPage from './Pages/MenuPage'
 
 // Hooks
 import useWindowDimensions from './Hooks/UseWindowDimension'
+import Footer from './Components/Footer'
 
 function Layout({location}) {
     var { width } = useWindowDimensions()
@@ -32,6 +33,7 @@ function Layout({location}) {
                     </Switch>
                 </CSSTransition>
             </TransitionGroup>
+            <Footer/>
         </React.Fragment>
     )
 }

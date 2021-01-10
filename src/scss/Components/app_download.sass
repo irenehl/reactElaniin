@@ -1,0 +1,40 @@
+.phone
+    margin-top: -12rem
+    width: 100%
+    height: auto
+
+.benefits
+    text-align: center
+    margin: 0
+    padding: 0 2rem
+    
+    strong
+        display: block
+        background-color: $primary
+        margin-top: 0.3rem
+        padding-top: -5px 
+        padding-bottom: 0.3rem
+
+.infoTitle
+    font-weight: 700
+    margin: 0.8rem
+    font-size: 1.1rem
+
+@include media(xs)
+    .infoGrouper.first
+        margin-top: 3rem!important
+
+@include media(sm)
+    .phone
+        width: 60%
+        margin-bottom: 2rem
+
+@include media(md)
+    .benefits
+        font-size: 2rem
+
+    .infoContainer
+        padding-top: 2rem
+
+    .phone
+        width: 100%

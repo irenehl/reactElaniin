@@ -1,0 +1,29 @@
+.black {
+  text-align: center;
+  background-color: black;
+  color: white; }
+
+.inputGroup > * {
+  width: 100%; }
+
+.inputGroup > label {
+  font-size: 0.8rem;
+  text-align: left; }
+
+.form-input {
+  color: white;
+  padding: 0.7rem 0.5rem;
+  background-color: transparent;
+  border-radius: 5px;
+  margin-bottom: 0.5rem; }
+
+.form-input:focus {
+  border: 1px solid #FFC700;
+  color: #FFC700; }
+
+.yellow-primary {
+  color: #FFC700; }
+
+.btn-custom {
+  background-color: #FFC700;
+  font-weight: 700; }

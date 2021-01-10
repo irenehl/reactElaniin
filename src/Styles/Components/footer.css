@@ -1,0 +1,14 @@
+.storeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.store {
+  margin: 0.4rem 0.2rem;
+  width: 35%; }
+
+.footer-title {
+  font-size: 1.4rem; }
+
+.footer-link {
+  margin: 0.8rem 0; }

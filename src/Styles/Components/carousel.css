@@ -1,0 +1,21 @@
+.carousel.slide {
+  height: 50vh; }
+
+.item-title {
+  font-size: 1.4rem; }
+
+.item-text {
+  text-align: center;
+  padding: 0.8rem 0.4rem 0;
+  font-size: 1rem; }
+
+.ketchup {
+  position: relative;
+  object-fit: contain; }
+
+.ketchup-left {
+  left: -4rem; }
+
+.ketchup-right {
+  right: 6rem;
+  top: 9rem; }

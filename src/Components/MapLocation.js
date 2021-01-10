@@ -41,11 +41,10 @@ function MapLocation() {
     return(
         <div className="container-fluid mt-4 pt-4">
             <div className="row mapContainer d-flex align-items-center">
-                <div className="col-12 col-md-4 d-flex flex-column">
+                <div className="col-12 col-lg-4 d-flex flex-column">
                     <div className="row">
-                        <h1 className="col-12 druk ms-3">Estamos para ti</h1>
+                        <h1 className="col-11 druk ms-3">Estamos para ti</h1>
                     </div>
-                    
                     <div className="row">
                         <button 
                         id="takeaway"
@@ -80,7 +79,7 @@ function MapLocation() {
                     </div>
                 </div>
                 <MapContainer 
-                className="d-none d-md-block col-8 col-md-8 map" 
+                className="d-none d-sm-block col-12 col-lg-8 map" 
                 center={coordinates} zoom={15} scrollWheelZoom={true}>
                     <ChangeView center={coordinates} zoom={15}/>
                     <TileLayer
