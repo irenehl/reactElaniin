@@ -1,3 +1,31 @@
+.card {
+  margin: 1rem;
+  padding: 0;
+  transition: box-shadow 0.3s ease-in-out;
+  border: none; }
+
+.card:hover {
+  box-shadow: 0px 16px 24px 0px #385172; }
+
+.card-title, .card-text {
+  text-align: left; }
+
+.card-phone {
+  width: 90%; }
+
+.card-img-top {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px; }
+
+@media (min-width: 768px) {
+  .card-tablet {
+    width: 45%; } }
+
+@media (min-width: 1361px) {
+  .card-large {
+    width: 20%; } }
+
 .black {
   text-align: center;
   background-color: black;
@@ -31,15 +59,15 @@
 .grouper {
   margin-bottom: 8rem !important; }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .grouper {
     margin: 0 1rem; } }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .grouper {
     margin: 0 2rem; } }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .form-title {
     margin: 3rem 0;
     font-size: 2rem; }
@@ -70,7 +98,7 @@
 .footer-link.last {
   margin-bottom: 3rem; }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .footer-title {
     font-size: 1.5rem !important;
     padding-left: 2rem;
@@ -81,9 +109,15 @@
     justify-content: flex-end;
     padding-right: 1.5rem !important; } }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .store {
     width: 25%; } }
+
+.text-white {
+  color: white !important; }
+
+.black-hero {
+  background-color: black !important; }
 
 .over-hidden {
   overflow: hidden; }
@@ -110,12 +144,12 @@
   right: 0;
   top: 9rem; }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .item-title {
     width: 100%;
     font-size: 2rem; } }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .carousel.slide {
     padding: 0; }
   .ketchup-right {
@@ -166,11 +200,11 @@
   color: black;
   text-decoration: none; }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .interchange {
     flex-direction: column; } }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .people {
     width: 100%;
     margin-left: 0; }
@@ -179,7 +213,7 @@
   .text-gray {
     font-size: 1.3rem; } }
 
-@media (min-width: 1360px) {
+@media (min-width: 1361px) {
   .interchange {
     margin-top: 8rem; }
   .about-title {
@@ -245,11 +279,11 @@
 .map {
   height: 60vh; }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .take-out {
     font-size: 1rem; } }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .mapContainer {
     margin: 3rem 0; }
   .location {
@@ -284,7 +318,7 @@
   color: black;
   font-size: 1.3rem; }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .hero-title {
     font-size: 2.5rem; }
   .hero-text {
@@ -292,7 +326,7 @@
   .hero-text, .hero-title, .find-us {
     margin-left: 1.8rem; } }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .hero-title {
     font-size: 4rem; }
   .hero-text {
@@ -314,7 +348,7 @@
 .navbar-nav {
   margin-left: 1.7rem; }
 
-@media (min-width: 1360px) {
+@media (min-width: 1361px) {
   .nav-item {
     margin: 0 3.1rem !important; } }
 
@@ -326,12 +360,21 @@
   right: 0;
   width: 90vw; }
 
-@media (min-width: 767px) {
+.yellow-body.dark {
+  right: -110vw;
+  top: -25vh;
+  height: 80%;
+  width: auto; }
+
+@media (min-width: 768px) {
   .yellow-body {
     top: -5vh;
-    width: 55vw; } }
+    width: 55vw; }
+  .yellow-body.dark {
+    top: -25vh;
+    right: -50vw; } }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .yellow-body {
     width: 52vw; } }
 
@@ -356,16 +399,16 @@
   margin: 0.8rem;
   font-size: 1.1rem; }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .infoGrouper.first {
     margin-top: 3rem !important; } }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .phone {
     width: 60%;
     margin-bottom: 2rem; } }
 
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   .benefits {
     font-size: 2rem; }
   .infoContainer {

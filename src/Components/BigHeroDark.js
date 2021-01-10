@@ -6,7 +6,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 import hero_hamb from '../resources/hero_hamburger_1.png'
 
-function BigHero() {
+function BigHeroDark() {
     var { width } = useWindowDimensions()
 
     return (
@@ -36,4 +36,4 @@ function BigHero() {
     )
 }
 
-export default BigHero
+export default BigHeroDark

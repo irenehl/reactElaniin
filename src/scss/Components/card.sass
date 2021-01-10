@@ -1,0 +1,27 @@
+.card
+    margin: 1rem
+    padding: 0
+    transition: box-shadow 0.3s ease-in-out;
+    border: none
+
+.card:hover
+    box-shadow: 0px 16px 24px 0px rgba(56, 81, 114, 1)
+
+.card-title,.card-text
+    text-align: left
+
+.card-phone
+    width: 90%
+
+.card-img-top
+    object-fit: cover
+    width: 100%
+    border-radius: 5px
+
+@include media(sm)
+    .card-tablet
+        width: 45%
+
+@include media(lg)
+    .card-large
+        width: 20%

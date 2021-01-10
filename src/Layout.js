@@ -20,8 +20,6 @@ function Layout({location}) {
     var { width } = useWindowDimensions()
     return (
         <React.Fragment>
-            { width < 1024 ? <PhoneNavigation/> : <Navigation />}
-            <BigHero />
             <TransitionGroup>
                 <CSSTransition
                     key={location.key}
