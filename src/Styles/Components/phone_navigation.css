@@ -1,0 +1,21 @@
+.foodies {
+  position: absolute;
+  z-index: 2;
+  top: 1.3rem;
+  left: 1.1rem; }
+
+.hamb {
+  font-size: 1.2rem;
+  position: absolute;
+  z-index: 2;
+  top: 1.3rem;
+  right: 1.1rem; }
+
+.hiden-nav {
+  padding: 4.4rem 1.6rem;
+  z-index: 1;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; }

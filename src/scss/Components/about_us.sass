@@ -1,0 +1,70 @@
+.hover-img-container
+    overflow: hidden
+
+.gradient
+    overflow: hidden
+    background: linear-gradient(359.79deg, #040404 -13.79%, rgba(0, 0, 0, 0) 61.58%);
+
+.people
+    position: relative
+    z-index: -1
+    margin-left: -11rem
+
+.hover-text
+    position: relative
+    top: 590px
+    z-index: 1
+    padding: 0 2rem 3rem 0
+    flex-flow: column nowrap
+    color: white
+    text-align: right
+
+.text-gray
+    color: $secondary
+
+.w-95
+    width: 95%
+
+.about-title
+    font-weight: 700
+    font-size: 1.4rem
+
+.bg-yellow-lines
+    background-image: url('../resources/lines.svg')
+
+.pt-6
+    padding-top: 6rem
+
+.find-us-about,.find-us-about:active,.find-us-about:focus
+    color: black
+    text-decoration: none
+
+
+@include media(xs)
+    .interchange
+        flex-direction: column
+    
+@include media(sm)
+    .people
+        width: 100%
+        margin-left: 0
+
+    .about-title
+        font-size: 1.6rem
+
+    .text-gray
+        font-size: 1.3rem
+
+@include media(lg)    
+    .interchange
+        margin-top: 8rem
+
+    .about-title
+        margin-top: 5rem
+
+    .lined
+        margin-left: 2.5rem
+        background-position-y: 5rem
+
+    .find-us-about
+        font-size: 1.4rem
