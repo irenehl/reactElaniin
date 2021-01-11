@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Navigation(props) {
     return (
@@ -17,7 +18,7 @@ function Navigation(props) {
                                 <a className="fw-bold active nav-link syne" href="#">Restaurantes</a>
                             </li>
                             <li className="nav-item ms-1 me-1">
-                                <a className="fw-bold active nav-link syne" href="#">Menú</a>
+                                <Link to="/menu" className="fw-bold active nav-link syne" href="#">Menú</Link>
                             </li>
                             <li className="nav-item ms-1 me-1">
                                 <a className="fw-bold active nav-link syne" href="#">Contáctanos</a>

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 import { useTransition, animated } from 'react-spring'
+import { Link } from 'react-router-dom'
 
 function PhoneNavigation() {
     const [showMenu, setShowMenu] = useState(false)
@@ -31,6 +32,7 @@ function PhoneNavigation() {
                     onClick={() => setShowMenu(false)}
                 >
                     <h1 className="syne mt-5">Acerca de</h1>
+                    <h1 className="syne mt-4"><Link to="/menu">Menu</Link></h1>
                     <h1 className="syne mt-4">Restaurantes</h1>
                     <h1 className="syne mt-4">Contactanos</h1>
                 </animated.div>

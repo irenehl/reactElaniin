@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function DarkNavigation() {
     return (
@@ -23,9 +24,9 @@ function DarkNavigation() {
                                 </a>
                             </li>
                             <li className="nav-item ms-1 me-1">
-                                <a className="text-white fw-bold active nav-link syne" href="#">
+                                <Link to="/menu" className="text-white fw-bold active nav-link syne" href="#">
                                     Menú
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item ms-1 me-1">
                                 <a className="text-white fw-bold active nav-link syne" href="#">
